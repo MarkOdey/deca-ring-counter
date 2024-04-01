@@ -505,6 +505,9 @@
   (junction (at 31.75 153.67) (diameter 0) (color 0 0 0 0)
     (uuid db9a227c-2bac-48a6-93d2-d78cbecfd288)
   )
+  (junction (at 135.89 100.33) (diameter 0) (color 0 0 0 0)
+    (uuid e1848759-b326-473f-bd03-ad340a1da569)
+  )
   (junction (at 31.75 128.27) (diameter 0) (color 0 0 0 0)
     (uuid e8d7623d-cdc9-4a95-be2d-70688e0e17be)
   )
@@ -535,6 +538,10 @@
   (wire (pts (xy 135.89 35.56) (xy 135.89 39.37))
     (stroke (width 0) (type default))
     (uuid 188aee2e-eeed-4414-8af3-d54f48d1ac1f)
+  )
+  (wire (pts (xy 135.89 100.33) (xy 147.32 100.33))
+    (stroke (width 0) (type default))
+    (uuid 19449798-e2ee-4695-80e8-991855455dde)
   )
   (wire (pts (xy 64.77 125.73) (xy 91.44 125.73))
     (stroke (width 0) (type default))
@@ -640,7 +647,7 @@
     (stroke (width 0) (type default))
     (uuid 4ca862a6-3e78-4623-82ad-0ecace022b53)
   )
-  (wire (pts (xy 135.89 93.98) (xy 135.89 106.68))
+  (wire (pts (xy 135.89 93.98) (xy 135.89 100.33))
     (stroke (width 0) (type default))
     (uuid 4eb8b7b6-d3fe-4179-a817-61a43589ceca)
   )
@@ -752,6 +759,10 @@
     (stroke (width 0) (type default))
     (uuid 8e462289-0038-419c-991c-04faa84f9909)
   )
+  (wire (pts (xy 135.89 100.33) (xy 135.89 106.68))
+    (stroke (width 0) (type default))
+    (uuid 8f369e57-64a4-43e9-9c85-619cd9db8e95)
+  )
   (wire (pts (xy 27.94 85.09) (xy 31.75 85.09))
     (stroke (width 0) (type default))
     (uuid 9140ce71-8d66-41e8-9089-5091ffe812ce)
@@ -759,6 +770,10 @@
   (wire (pts (xy 135.89 144.78) (xy 135.89 156.21))
     (stroke (width 0) (type default))
     (uuid 92e72ef3-81bc-4587-aca1-eb1116c81b97)
+  )
+  (wire (pts (xy 161.29 90.17) (xy 162.56 90.17))
+    (stroke (width 0) (type default))
+    (uuid 98c9379f-fb74-4a4b-85f0-34acd984d8ac)
   )
   (wire (pts (xy 203.2 106.68) (xy 203.2 107.95))
     (stroke (width 0) (type default))
@@ -847,6 +862,10 @@
   (wire (pts (xy 102.87 71.12) (xy 101.6 71.12))
     (stroke (width 0) (type default))
     (uuid c3db569d-ff7e-44a6-86ef-a4aee79e38f9)
+  )
+  (wire (pts (xy 162.56 100.33) (xy 162.56 90.17))
+    (stroke (width 0) (type default))
+    (uuid c4b0984e-8119-4a4d-beae-ff41d25949cb)
   )
   (wire (pts (xy 31.75 128.27) (xy 31.75 140.97))
     (stroke (width 0) (type default))
@@ -1116,7 +1135,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 111.76 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2351aa85-6464-462c-a3e2-4e728014c3a1)
-    (property "Reference" "SW?" (at 96.52 104.14 0)
+    (property "Reference" "SW6" (at 96.52 104.14 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 106.68 0)
@@ -1133,12 +1152,6 @@
     (pin "3" (uuid d38e8b67-cdb6-4311-b3b3-60636ad9bd33))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW16") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW6") (unit 1)
         )
@@ -1265,6 +1278,32 @@
     )
   )
 
+  (symbol (lib_id "Device:LED") (at 151.13 100.33 0) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 61792a70-e406-40f1-bbc0-df103853a288)
+    (property "Reference" "D1" (at 149.5425 106.68 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LED" (at 149.5425 104.14 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "eurocad:LED3mm" (at 151.13 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 151.13 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b8300b31-364a-418a-bf04-39cb8468bef9))
+    (pin "2" (uuid b1aae1ce-3840-4cdc-b47a-48f8637a6c79))
+    (instances
+      (project "deca-ring-counter"
+        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
+          (reference "D1") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R_Potentiometer") (at 175.26 134.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 7930b0f9-0569-480d-b82a-bfc4f5054321)
@@ -1348,7 +1387,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 88fa09a5-11a1-46cf-b66f-9c26877a58e3)
-    (property "Reference" "SW?" (at 96.52 91.44 0)
+    (property "Reference" "SW5" (at 96.52 91.44 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 93.98 0)
@@ -1365,12 +1404,6 @@
     (pin "3" (uuid a300c539-50cd-4fe3-9bfb-a6dae0577aef))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW15") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW5") (unit 1)
         )
@@ -1407,7 +1440,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 138.43 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9485da07-25ef-4b3d-bfba-a381dad2db02)
-    (property "Reference" "SW?" (at 96.52 130.81 0)
+    (property "Reference" "SW8" (at 96.52 130.81 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 133.35 0)
@@ -1424,12 +1457,6 @@
     (pin "3" (uuid 8ac5751a-081c-47a7-8bdc-5df329a9ecaf))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW18") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW8") (unit 1)
         )
@@ -1642,7 +1669,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 125.73 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a9cb3eea-af87-469d-a1c7-e9e77cc6e2d7)
-    (property "Reference" "SW?" (at 96.52 118.11 0)
+    (property "Reference" "SW7" (at 96.52 118.11 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 120.65 0)
@@ -1659,12 +1686,6 @@
     (pin "3" (uuid 97a7ab06-975c-4627-a6c0-19571e801ea2))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW17") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW7") (unit 1)
         )
@@ -1675,7 +1696,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 73.66 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aeac13dc-0ef3-44ed-92de-01c2e6e25ba0)
-    (property "Reference" "SW?" (at 96.52 66.04 0)
+    (property "Reference" "SW3" (at 96.52 66.04 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 68.58 0)
@@ -1692,12 +1713,6 @@
     (pin "3" (uuid dbb4c00c-5dab-4e3a-9628-d7a9d0e99d57))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW13") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW3") (unit 1)
         )
@@ -1773,10 +1788,51 @@
     )
   )
 
+  (symbol (lib_id "PCM_4ms_Resistor:1k_0603") (at 158.75 100.33 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid c11f47b3-b098-440a-b2d7-1e7caa05cc0c)
+    (property "Reference" "R29" (at 158.75 93.98 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "1k_0603" (at 158.75 97.79 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" (at 146.05 97.79 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Datasheet" "" (at 158.75 100.33 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Specifications" "1K, 1%, 1/10W, 0603" (at 150.876 97.79 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Manufacturer" "Yageo" (at 149.352 97.79 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Part Number" "RC0603FR-071KL" (at 147.828 97.79 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Display" "10k" (at 158.75 96.52 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "JLCPCB ID" "C21190" (at 143.51 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid de398fcf-5394-4e59-b7af-9a52b88356e8))
+    (pin "2" (uuid aa8c2971-0555-416b-8060-5a4efcecd597))
+    (instances
+      (project "deca-ring-counter"
+        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
+          (reference "R29") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 163.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d827a93b-88f3-4eaa-b704-133ce5ae1f22)
-    (property "Reference" "SW?" (at 96.52 156.21 0)
+    (property "Reference" "SW10" (at 96.52 156.21 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 158.75 0)
@@ -1793,12 +1849,6 @@
     (pin "3" (uuid d2d324f6-64bb-4988-9323-ce5dc08d4649))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW20") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW10") (unit 1)
         )
@@ -1876,7 +1926,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 86.36 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e5c4fe9d-46f2-41f3-ab64-421bb28cd073)
-    (property "Reference" "SW?" (at 96.52 78.74 0)
+    (property "Reference" "SW4" (at 96.52 78.74 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 81.28 0)
@@ -1893,12 +1943,6 @@
     (pin "3" (uuid 3f301416-a45f-4972-b7a7-9000a85503f6))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW14") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW4") (unit 1)
         )
@@ -1909,7 +1953,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 59.69 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid e898c731-22e3-4ca4-8bba-e144a22c5783)
-    (property "Reference" "SW?" (at 96.52 52.07 0)
+    (property "Reference" "SW2" (at 96.52 52.07 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 54.61 0)
@@ -1926,12 +1970,6 @@
     (pin "3" (uuid 5806a085-9644-4ed3-9a3f-4ee75ce042d9))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW12") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW2") (unit 1)
         )
@@ -1942,7 +1980,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 46.99 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ecd18b47-cf04-42f2-86f5-649deb34149e)
-    (property "Reference" "SW?" (at 96.52 39.37 0)
+    (property "Reference" "SW1" (at 96.52 39.37 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 41.91 0)
@@ -1959,12 +1997,6 @@
     (pin "3" (uuid eb74e69f-4fc2-4e16-87fd-16ca22134748))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW11") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW1") (unit 1)
         )
@@ -2166,7 +2198,7 @@
   (symbol (lib_id "Switch:SW_SPDT") (at 96.52 151.13 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid feb47a1d-233a-4ba4-98b7-c8b758ac8885)
-    (property "Reference" "SW?" (at 96.52 143.51 0)
+    (property "Reference" "SW9" (at 96.52 143.51 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "SW_SPDT" (at 96.52 146.05 0)
@@ -2183,12 +2215,6 @@
     (pin "3" (uuid df29a4c2-a717-4192-9d30-7a8b63bce84c))
     (instances
       (project "deca-ring-counter"
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f"
-          (reference "SW?") (unit 1)
-        )
-        (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/1d0120ef-5ec5-4202-a7d1-f69773c89a24"
-          (reference "SW19") (unit 1)
-        )
         (path "/aa65e71e-1159-43d8-a13d-c6d558fbae1f/e6968eb7-46c5-48ae-9904-daedf273533e"
           (reference "SW9") (unit 1)
         )
